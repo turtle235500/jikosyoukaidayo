@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>たーとるのホームページ</title>
+<meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  /*高デザインボタンを追加すると、CSSで文字サイズやフォントを指定しないとバグるので、すべての文字にしっかりと指定しておきます*/
+  h2{
+    font-size: 22px;
+  }
+  h1{
+    font-size: 25px;
+  }
+  p{
+    font-size: 20px;
+  }
+  li{
+    font-size: 19px;
+    text-align: left;
+   
+  }
+  span{
+    font-size: 25px;
+    
+  }
+  #hatena2{
+    display: flex;
+  }
+
+
+/*文字指定区間ここまで*/
+
+
+/*高デザインボタン　ベースCSS*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;/*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    background-image: url(image/b080.jpg);
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+    text-align: left; 
+  }
+
+  li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+
+  li a:hover {
+    color: #007bff;
+  }
+
+  li a::before {
+    content: "▪";
+    margin-right: 5px;
+    color: #007bff;
+  }
+ .section2{
+color: #ff0000;
+}
+
+/*セクション２のSNS達のCSS*/
+  .twitter-logo {
+  
+    margin: 14px;/*隣との間隔*/
+    
+    border-radius:30px;
+
+    width: 130px; 
+  height:130px;
+    cursor: pointer; /* マウスを重ねたときにポインターを表示 */
+  }
+.insta-logo {
+  border-radius:30px;
+
+  margin: 14px;
+
+  width: 130px; 
+  height:130px; 
+    
+  cursor: pointer; 
+  }
+.tik-logo {
+  border-radius:30px; 
+
+  margin: 14px;
+
+  width: 130px; /*ロゴのサイズ、切り抜き*/
+  height:130px; 
+    cursor: pointer; 
+}
+.th-logo { 
+ 
+  margin: 14px;
+
+  width: 130px;
+  border-radius:30px; 
+  height:130px;
+    cursor: pointer; 
+}
+.blue-logo {
+
+  margin: 14px;
+
+  border-radius: 30px;  
+  width: 130px; 
+  height:130px;
+    cursor: pointer; 
+}
+
+/*高デザインボタン*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  padding: 30px;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-svg {
+  font-weight: 700;
+  line-height: 54px;
+
+  width: 204px;
+  height: 54px;
+  padding: 0;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  background-color: transparent;
+}
+
+a.btn-svg svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+a.btn-svg svg rect {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+
+  stroke: #000;
+  stroke-width: 2;
+  stroke-dasharray: 200px, 16px;
+  stroke-dashoffset: 70px;
+}
+
+a.btn-svg:hover svg rect {
+  stroke-dashoffset: 284px;
+}
+
+a.btn-svg span {
+  color: #000;
+}
+
+/* 高デザインなYouTubeリンクへのボタン*/
+.button010 a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    transform: skew(-15deg);
+    color: #fff;
+    background-image: -webkit-gradient(linear, left top, right top, from(#2af598), to(#009efd));
+    background-image: -webkit-linear-gradient(left, #2af598 0%, #009efd 100%);
+    background-image: linear-gradient(90deg, #2af598 0%, #009efd 100%);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.button010 a:hover {
+  -webkit-transform: skew(0);
+  transform: skew(0);
+  color: #fff;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+}
+</style>
+
+
+
+
+
+
+</head>
+<body>
+<h1>たーとるのホームページ</h1>
+<h1>目次</h1>
+
+<ul>
+  <li><a href="#section1">プロフィール</a></li>
+  <li><a href="#section2">SNS</a></li>
+  <li><a href="#section3">ブログ</a></li>
+  <li><a href="#section4">YouTube</a></li>
+</ul>
+
+
+<h1 id="section1">プロフィール</h1>
+<p><img src="image\WTsBT9pt_400x400.jpg"width＝"100" height="200" alt＝"Xのプロフィール画像"> </p>
+<ul>
+<li>年齢･･･20歳以下（高校生）</li>
+<li>性別･･･多分おとこ</li>
+<li>出身地･･･長野県</li>
+<li></li>
+<li>好きな動物･･･亀</li>
+<li>好きな料理･･･すしらーめん</li>
+<li>好きなゲーム･･･Minecraft</li>
+<li>身長･･･173</li>
+</ul>
+
+
+
+<h1 id="section2">SNS</h1>
+<span class="section2">たーとるのSNSをまとめました</p></span>
+
+
+<!--Twitterのボタン-->
+<a href="https://twitter.com/hyikametat_523" target="_blank"> <!-- リンク先URL -->
+  <img src="image/OIP.jpg" alt="Twitter" class="twitter-logo">
+</a>
+<!--インスタのボタン-->
+<a href="https://www.instagram.com/turtle232c.tat?igsh=a3lya25qYnRqd3F5" target="_blank"> <!-- リンク先URL -->
+  <img src="image/Instagram_Glyph_Gradient.png" alt="instagram" class="insta-logo">
+</a>
+<!--tiktokのボタン-->
+<a href="https://www.tiktok.com/@tatru_1552.hf.sub?_t8l4y6gvlDdl&_r=1" target="_blank"> <!-- リンク先URL -->
+  <img src="image/TikTok-Logo-2017-2018.png" alt="tik" class="tik-logo">
+</a>
+<!--スレッズのボタン-->
+<a href="https://www.threads.net/@shenjingzhengshu6" target="_blank"> <!-- リンク先URL -->
+  <img src="image/361591942_304761532104096_2740029438399114184_n.png" alt="tik" class="tik-logo">
+</a>
+<!--ブルースカイのボタン-->
+<a href="https://bsky.app/profile/turtlehys355.bsky.social" target="_blank"> <!-- リンク先URL -->
+  <img src="image/bluesky-social5027.logowik.com.jpeg" alt="tik" class="tik-logo">
+</a>
+
+<h1 id="section3">ブログ</h1>
+<p>あまり更新できていませんが、気が向いたときに皆さんにお伝えしたい発見などを記していきます。パソコン、ガジェットの自腹レビューもします。</p><p>はてなブログを利用していますので良ければ読者登録をお願い致します。</p><a href="" class="btn btn-c">はてなブログ</a>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fturtle-hyikame1.hatenablog.com%2Fentry%2F2024%2F02%2F16%2F170629" title="～2024年最新～新たに高校、大学へ進学する方にお勧めの学校用ノートパソコンを紹介！学校から指定されたスペックについて解説！ - たーとるブログ" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://turtle-hyikame1.hatenablog.com/entry/2024/02/16/170629?_gl=1*15stskl*_gcl_au*ODgzNzM0NTY4LjE3MDkxMDU3MjA.">turtle-hyikame1.hatenablog.com</a></cite></p>
+<p id="hatena2"><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fturtle-hyikame1.hatenablog.com%2Fentry%2F2023%2F12%2F13%2F212754" title="パソコンを買うときに最低限知っておくべきこと！おすすめPCも紹介。2024年最新版 - たーとるブログ" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://turtle-hyikame1.hatenablog.com/entry/2023/12/13/212754?_gl=1*vjk2t3*_gcl_au*ODgzNzM0NTY4LjE3MDkxMDU3MjA.">turtle-hyikame1.hatenablog.com</a></cite>
+</p>
+
+<!-- 高デザイン　はてなブログ -->
+<a href="https://hatena.blog/" class="btn btn-svg">
+  <svg>
+    <rect x="2" y="2" rx="0" fill="none" width=200 height="50"></rect>
+  </svg>
+  <span>はてなブログ</span>
+</a>
+
+<h1 id="section4">YouTube</h1>
+<p>YouTubeで動画投稿もしております。</p>
+<h2>たーとるのゲーム場</h2>
+<div class="button010">
+	<a href="https://www.youtube.com/channel/UCEgCt32JCybKHmmlBk2eI2Q">たーとるのゲーム場</a><p>最近のイチオシ動画
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/AH9YsHuFWFU?si=LyNzmrQ6IDhlk-mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+</div>
+<h2>重低音強化チャンネル、Turtle Bass Boost</h2>
+<div class="button010">
+	<a href="https://www.youtube.com/@turtlebassboost-we3pf">Turtle Bass Boost</a><iframe width="560" height="315" src="https://www.youtube.com/embed/Prv0-_BMdhM?si=joacie0Z_DuEycIO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+  </iframe>
+</div>
+</p>
+</div>
+
+
+
+</body>
+</html>
